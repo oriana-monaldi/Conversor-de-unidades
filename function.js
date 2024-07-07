@@ -22,9 +22,6 @@ function conversor() {
 
         let resultado;
 
-        if (isNaN(numeroIngresado)) {
-            console.log("No se ha ingresado un número válido.");
-        } else {
             if (actual === "centimetros" && deseada === "metros") {
                 resultado = numeroIngresado / 100;
             } else if (actual === "centimetros" && deseada === "kilometros") {
@@ -37,9 +34,6 @@ function conversor() {
                 resultado = numeroIngresado * 1000;
             } else if (actual === "kilometros" && deseada === "centimetros") {
                 resultado = numeroIngresado * 100000;
-            } else {
-                console.log("La unidad deseada no es válida.");
-                continue; 
             }
             
             console.log("El resultado de la conversión es:", resultado.toFixed(2));
@@ -47,6 +41,5 @@ function conversor() {
             seguir = prompt("¿Desea realizar otra conversión? (si / no)").toLowerCase();
         }
     }
-}
 
 conversor();
